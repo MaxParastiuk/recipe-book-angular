@@ -29,7 +29,6 @@ export class RecipeService {
   }
 
   getCurrentRecipe(index: number) {
-    console.log(this.recipes[index]);
     return this.recipes[index];
   }
 
