@@ -41,11 +41,18 @@ export class AuthComponent {
       },
       (errorMessage) => {
         this.error = errorMessage;
-        console.log(errorMessage);
+        // this.showErrorAlert(errorMessage);
         this.isLoading = false;
       },
     );
 
     form.reset();
   }
+  onHandleError() {
+    this.error = null;
+  }
+
+  // private showErrorAlert(message: string){
+  //     const alertCmp = new AlertComponent();
+  // }
 }
