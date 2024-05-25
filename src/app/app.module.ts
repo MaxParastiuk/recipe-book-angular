@@ -10,6 +10,7 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { ShopingListModule } from './shoping-list/shoping-list.module';
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core.modules';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -17,18 +18,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ShopingListModule,
-    AuthModule,
     SharedModule,
-  ],
-  providers: [
-    ShopingListService,
-    RecipeService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptorService,
-      multi: true,
-    },
+    CoreModule,
   ],
   bootstrap: [AppComponent],
 })

@@ -4,7 +4,7 @@ import { BehaviorSubject, Subject, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { User } from './user.model';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 
 export interface AuthResponseData {
   kind: string;
@@ -115,8 +115,8 @@ export class AuthService {
   }
   private handleAuthentication(
     email: string,
-    token: string,
     userId: string,
+    token: string,
     expiresIn: number,
   ) {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
