@@ -9,6 +9,7 @@ import { RecipeService } from './recipes/recipe.service';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { ShopingListModule } from './shoping-list/shoping-list.module';
 import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -18,6 +19,7 @@ import { AuthModule } from './auth/auth.module';
     HttpClientModule,
     ShopingListModule,
     AuthModule,
+    SharedModule,
   ],
   providers: [
     ShopingListService,
